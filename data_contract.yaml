@@ -1,6 +1,6 @@
 other_info:
   output_port_path: "dbfs:/user/hive/warehouse/fr_24_100_krows"
-  output_port_format: "parquet"
+  output_port_format: "delta"
   output_port_name: "fr24_100k_parquet"
 
 data_quality: # Data quality section of the Data Contract
