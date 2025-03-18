@@ -1,0 +1,47 @@
+other_info:
+  output_port_path: "Files/fr24_100krows.parquet"
+  output_port_format: "parquet"
+  output_port_name: "fr24_100k_parquet"
+
+data_quality: # Data quality section of the Data Contract
+
+  # Name of the asset that the rules apply to
+  fr24_100k:
+
+    datetime: lastupdated # Name of the column containing the creation date of each column
+    scan_type: full # Require full or incremental scan for this table
+
+    rules:
+
+    - rule_name: 'fr24_100k.not_null'
+      columns:
+        - flightid
+        - aircraftid
+      rule_type: 'ExpectColumnValuesToNotBeNull'
+      threshold:
+          - 70
+          - 80
+
+    - rule_name: 'fr24_100k.in_range'
+      columns:
+        - speed
+        - altitude
+      rule_type: 'ExpectColumnValuesToBeBetween'
+      parameters:
+          - [0, 600]
+          - [0, 400000]
+      threshold:
+          - 95
+          - 100
+
+    - rule_name: 'fr24_100k.match_regex'
+      columns:
+        - callsign
+        - destination
+      rule_type: 'ExpectColumnValuesToMatchRegex'
+      parameters:
+          - '^[A-Z]{2}\d{3,5}$'
+          - '^[A-Z]{3}$'
+      threshold:
+          - 25
+          - 50
