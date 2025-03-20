@@ -8,7 +8,7 @@ data_quality: # Data quality section of the Data Contract
   # Name of the asset that the rules apply to
   fr24_100k:
 
-    datetime: lastupdated # Name of the column containing the creation date of each column
+    created_date_column: lastupdated # Name of the column containing the creation date of each column
     scan_depth: full # Require full or incremental scan for this table
 
     rules:
