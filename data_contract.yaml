@@ -1,7 +1,7 @@
 other_info:
   output_path: "dbfs:/user/hive/warehouse/fr_24_100_krows"
   output_name: "fr24_100k_parquet"
-  output_type: "dataframe"
+  output_type: "table"
   output_format: "delta"
 
 data_quality: # Data quality section of the Data Contract
