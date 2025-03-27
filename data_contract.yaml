@@ -9,7 +9,7 @@ data_quality: # Data quality section of the Data Contract
   # Name of the asset that the rules apply to
   gold_fr24.fr24_messages:
 
-    created_date_column: loaded_date # Name of the column containing the creation date of each column
+    created_date_column: lastupdate # Name of the column containing the creation date of each column
     scan_depth: full # Require full, incremental, or sample scan for this table
 
     rules:
