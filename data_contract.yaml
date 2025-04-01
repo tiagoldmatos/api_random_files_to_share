@@ -1,5 +1,5 @@
 other_info:
-  output_path: "dbfs:/user/hive/warehouse/gold_fr24.fr24_messages"
+  output_path: "dbfs:/user/hive/warehouse/"
   output_name: "fr24_100k_parquet"
   output_type: "no_sql" # no_sql, sql
   output_format: "delta"
