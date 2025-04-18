@@ -1,12 +1,71 @@
-other_info:
-  output_path: "dbfs:/user/hive/warehouse/"
-  output_name: "fr24_100k_parquet"
-  output_type: "no_sql" # no_sql, sql
-  output_format: "delta"
-
+id: # uid of the data contract
+business_info:
+  title: # name of the output port
+  port_id: # uid of the output port
+  version: # version of the data contract
+  description: # Description of the output port
+  status: # status of the data contract
+technical_info:
+  output_type: # databricks, cosmosdb, oracle...
+  location: # path to the location of the output data
+  format: # sql, json, parquet...
+  roles: # types of pre-defined access roles
+    - name:
+      description:
+    - name:
+      description:
+terms:
+  usage: # Terms of usage. i.e. Can's use in Machine Learning, only for analytics
+  limitations: # Rules of access. i.e. No more than 10 tb access per day
+  legal_policies: # May or may not be necessary
+    - name: privacy-policy
+      url: https://example.com/privacy-policy
+    - name: # Policy name
+      description: # Policy description
+      url: # Url fo the policy/legal usage agreement
+  billing: # In case there is a monthly price to use data product
+  noticePeriod: # How long the current version of the data contract stays unchanged
+model:
+  schema: # name of the schema. MUST MATCH COLLIBRA TECHNICAL DIRECTORY
+    table: # Name of the table in schema.table format. MUST MATCH COLLIBRA TECHNICAL DIRECTORY
+      columns: 
+        - column_a: # column names. MUST MATCH COLLIBRA TECHNICAL DIRECTORY
+        - column_b: # column names. MUST MATCH COLLIBRA TECHNICAL DIRECTORY
+servicelevels:
+  availability:
+    description: # Description of the SLA
+    percentage: # Uptime percentage
+  retention:
+    description: # Description of the SLA
+    period:  
+    unlimited:
+  latency:
+    description: 
+    threshold: 
+    sourceTimestampField: 
+    processedTimestampField: 
+  freshness:
+    description: 
+    threshold: 
+    timestampField: 
+  frequency:
+    description: 
+    type: 
+    interval: 
+    cron: 
+  support:
+    description: 
+    time: 
+    responseTime: 
+  backup:
+    description: 
+    interval: 
+    cron: 
+    recoveryTime: 
+    recoveryPoint: 
 data_quality: # Data quality section of the Data Contract
 
-  # Name of the asset that the rules apply to
+  # Name of the table that the rules apply to
   gold_fr24.fr24_messages:
 
     created_date_column: lastupdate # Name of the column containing the creation date of each column
