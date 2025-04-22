@@ -18,8 +18,6 @@ terms:
   usage: # Terms of usage. i.e. Can's use in Machine Learning, only for analytics
   limitations: # Rules of access. i.e. No more than 10 tb access per day
   legal_policies: # May or may not be necessary
-    - name: privacy-policy
-      url: https://example.com/privacy-policy
     - name: # Policy name
       description: # Policy description
       url: # Url fo the policy/legal usage agreement
